@@ -871,16 +871,32 @@ section{ position:relative; }
   background:var(--ink);
   color:var(--paper-soft);
   border-radius:var(--radius-l);
-  padding:clamp(28px,4vw,56px);
   display:grid;
-  grid-template-columns:auto 1fr auto;
-  gap:36px;
-  align-items:center;
+  grid-template-columns:340px 1fr;
+  align-items:stretch;
   position:relative;
   overflow:hidden;
 }
-@media (max-width:800px){
-  .event-card{ grid-template-columns:1fr; text-align:left; }
+.event-visual{
+  position:relative;
+  min-height:100%;
+}
+.event-visual img{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+.event-content{
+  padding:clamp(28px,4vw,48px);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:32px;
+  align-items:center;
+}
+@media (max-width:900px){
+  .event-card{ grid-template-columns:1fr; }
+  .event-visual{ max-height:260px; }
+  .event-content{ grid-template-columns:1fr; text-align:left; gap:20px; }
 }
 .event-date-block{
   text-align:center;
