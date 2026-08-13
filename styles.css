@@ -145,6 +145,53 @@ a{ color:inherit; }
 }
 
 /* ============================================================
+   Scroll progress runner
+   ============================================================ */
+#progress-rail{
+  position:fixed; top:0; left:0; right:0; height:3px;
+  background:rgba(28,25,20,.08);
+  z-index:410;
+}
+#progress-fill{
+  height:100%;
+  width:0%;
+  background:var(--brand-red-bright);
+  transition:width .08s linear;
+}
+#progress-runner{
+  position:fixed;
+  top:-3px;
+  left:0;
+  width:24px; height:24px;
+  transform:translateX(-50%);
+  z-index:411;
+  opacity:0;
+  transition:left .08s linear, opacity .3s var(--ease);
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.3));
+}
+#progress-runner.visible{ opacity:1; }
+@media (max-width:640px){
+  #progress-runner{ display:none; }
+}
+
+/* ============================================================
+   Mascot click interaction
+   ============================================================ */
+.mascot-click img,
+.mascot-click{ cursor:pointer; }
+.mascot-click.jump img,
+img.mascot-click.jump{
+  animation:mascot-jump .55s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes mascot-jump{
+  0%{ transform:translateY(0) rotate(0deg); }
+  30%{ transform:translateY(-10px) rotate(-8deg); }
+  55%{ transform:translateY(0) rotate(6deg); }
+  75%{ transform:translateY(-4px) rotate(-3deg); }
+  100%{ transform:translateY(0) rotate(0deg); }
+}
+
+/* ============================================================
    Nav
    ============================================================ */
 .site-nav{
@@ -975,12 +1022,8 @@ footer{
   color:var(--paper-soft); font-size:13px;
 }
 .footer-bottom{
-  display:flex; justify-content:space-between; align-items:center;
-  flex-wrap:wrap; gap:14px;
+  display:flex; justify-content:center; align-items:center;
   font-size:11.5px;
-}
-@media (max-width:720px){
-  .footer-bottom{ flex-direction:column; align-items:flex-start; }
 }
 
 /* ============================================================
@@ -1122,3 +1165,60 @@ footer{
 }
 #backToTop.show{ opacity:1; visibility:visible; transform:translateY(0); }
 #backToTop:hover{ background:var(--brand-red); }
+
+/* ============================================================
+   Floating IG link
+   ============================================================ */
+#igFloat{
+  position:fixed;
+  left:22px; bottom:22px;
+  width:52px; height:52px;
+  border-radius:50%;
+  background:var(--brand-red);
+  display:flex; align-items:center; justify-content:center;
+  z-index:300;
+  box-shadow:0 10px 24px rgba(155,13,35,.35);
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+#igFloat img{
+  width:30px; height:30px;
+  object-fit:contain;
+  animation:ig-bounce 2.4s ease-in-out infinite;
+}
+#igFloat:hover{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 14px 30px rgba(155,13,35,.45);
+}
+@keyframes ig-bounce{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-3px); }
+}
+@media (max-width:640px){
+  #igFloat{
+    width:42px; height:42px;
+    left:14px;
+    bottom:calc(14px + env(safe-area-inset-bottom, 0px));
+    background:rgba(155,13,35,.55);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+  }
+  #igFloat img{ width:24px; height:24px; }
+  #igFloat:active{ background:var(--brand-red); }
+}
+
+@media (max-width:640px){
+  #backToTop{
+    width:38px; height:38px;
+    right:14px;
+    bottom:calc(14px + env(safe-area-inset-bottom, 0px));
+    font-size:14px;
+    background:rgba(28,25,20,.42);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    color:rgba(255,255,255,.9);
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+  }
+  #backToTop.show{ opacity:.85; }
+  #backToTop:active{ opacity:1; background:var(--brand-red); }
+}

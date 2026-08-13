@@ -21,6 +21,31 @@ function onScrollNav(){
 document.addEventListener('scroll', onScrollNav, { passive: true });
 onScrollNav();
 
+// ---------- Scroll progress runner ----------
+const progressFill = document.getElementById('progress-fill');
+const progressRunner = document.getElementById('progress-runner');
+function onScrollProgress(){
+  const h = document.documentElement;
+  const scrollTop = h.scrollTop || document.body.scrollTop;
+  const scrollHeight = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+  const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+  progressFill.style.width = pct + '%';
+  progressRunner.style.left = pct + '%';
+  if (scrollTop > 20) progressRunner.classList.add('visible');
+  else progressRunner.classList.remove('visible');
+}
+document.addEventListener('scroll', onScrollProgress, { passive: true });
+onScrollProgress();
+
+// ---------- Mascot click interaction ----------
+document.querySelectorAll('.mascot-click').forEach(el => {
+  el.addEventListener('click', (e) => {
+    if (el.classList.contains('jump')) return;
+    el.classList.add('jump');
+    setTimeout(() => el.classList.remove('jump'), 550);
+  });
+});
+
 // ============================================================
 // TAB NAVIGATION (main + sub) with deep-link hash support
 // ============================================================
@@ -49,6 +74,7 @@ function activateTab(tabId, { updateHash = true, subtab = null } = {}) {
   }
 
   window.scrollTo({ top: 0, behavior: 'auto' });
+  if (typeof onScrollProgress === 'function') onScrollProgress();
   document.body.classList.remove('mobile-menu-open');
 }
 
