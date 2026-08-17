@@ -480,6 +480,13 @@ section{ position:relative; }
   color:var(--ink-faint);
   font-weight:600;
 }
+.hero-sub-only{
+  font-size:14px;
+  padding:10px 22px;
+  border:1px solid var(--paper-line);
+  border-radius:100px;
+  color:var(--ink-soft);
+}
 .hero-scroll{
   margin:10px auto 0;
   display:flex; flex-direction:column; align-items:center; gap:10px;
@@ -942,7 +949,8 @@ section{ position:relative; }
 }
 @media (max-width:900px){
   .event-card{ grid-template-columns:1fr; }
-  .event-visual{ max-height:260px; }
+  .event-visual{ max-height:280px; }
+  .event-visual img{ object-position:top center; }
   .event-content{ grid-template-columns:1fr; text-align:left; gap:20px; }
 }
 .event-date-block{

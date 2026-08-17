@@ -8,13 +8,9 @@ const I18N_DICT = {
   "nav.activities": { zh: "活動",   en: "Activities" },
   "nav.other":      { zh: "其他",   en: "More" },
 
-  "hero.tagline": {
-    zh: "下班不是終點，是<em>換一種方式</em><br>認識彼此的開始",
-    en: "Clocking out isn't the end —<br>it's just <em>a different way</em> to connect."
-  },
   "hero.sub": {
-    zh: "ABC-MART TAIWAN　|　跨部門與門市夥伴自發企劃　|　內容回顧與成果分享",
-    en: "ABC-MART TAIWAN　|　A staff-led cross-department initiative　|　Recap & results"
+    zh: "ABC-MART TAIWAN　|　店員運動企劃",
+    en: "ABC-MART TAIWAN　|　A Staff Fitness Initiative"
   },
 
   "event.eyebrow":   { zh: "接下來的活動", en: "What's Next" },
