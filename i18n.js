@@ -59,7 +59,7 @@ const I18N_DICT = {
     zh: "規劃跑團經營、球類企劃，並設計店鋪夥伴參與誘因，讓企劃從總部擴大到全體門市。",
     en: "Planning a running club, ball-sport events, and real incentives for store staff — growing this from an HQ project into a company-wide one."
   },
-  "strategy.f1": { zh: "三集累計瀏覽次數", en: "Total views across 3 episodes" },
+  "strategy.f1": { zh: "前三集累計瀏覽次數", en: "Total views, first 3 episodes" },
   "strategy.f2": { zh: "額外行銷預算", en: "Extra marketing budget" },
   "strategy.f3": { zh: "已完成企劃檔數", en: "Episodes completed" },
 
@@ -138,6 +138,25 @@ const I18N_DICT = {
     en: "Time to head outdoors — laced up in the PALLADIUM OFFBOUND AMPHIBIAN WP+ and hit the trail. A real hike put the shoe's waterproofing and comfort to the test, capturing the team's spirit of exploring nature. This episode marks the shift from topic-led to product-led content — a key step toward brand and product integration."
   },
 
+  "cards.v4": { zh: "ABC-MART × OTC，把西門町變成城市訓練場的街頭解謎跑", en: "ABC-MART × OTC — an urban mission run turning Ximending into a training ground" },
+  "vol4.title": { zh: "MORE THAN<br>A RUNNER", en: "MORE THAN<br>A RUNNER" },
+  "vol4.meta1": { zh: "西門町城市街頭解謎跑", en: "Ximending Urban Mission Run" },
+  "vol4.meetval": { zh: "西門峨嵋店", en: "Ximen Emei Store" },
+  "vol4.teamlabel": { zh: "隊伍", en: "Teams" },
+  "vol4.teamval": { zh: "6 人一隊", en: "6 per team" },
+  "vol4.cplabel": { zh: "CHECKPOINTS　順序隨機，各隊起點不同", en: "CHECKPOINTS — random order, different start for every team" },
+  "vol4.cpnote": { zh: "每隊只拿到一張黑色地圖，只知道第一個 Checkpoint；完成任務，才能解鎖屬於自己隊伍的下一站。", en: "Each team got one black map showing only the first checkpoint. Finish the mission to unlock your own next stop." },
+  "cp-1": { zh: "華中街", en: "Huazhong St." },
+  "cp-2": { zh: "美國街・塗鴉區", en: "American St. Graffiti Zone" },
+  "cp-3": { zh: "電影街", en: "Cinema Street" },
+  "cp-4": { zh: "ABC-MART 分店", en: "ABC-MART Store" },
+  "cp-5": { zh: "街頭廣場", en: "Street Plaza" },
+  "cp-6": { zh: "回店・Finish Stamp", en: "Back to Store · Finish Stamp" },
+  "vol4.story": {
+    zh: "MORE THAN A RUNNER。ABC-MART 與 OffTrack Crew 首次跨界合作，把整個西門町變成城市訓練場。從西門峨嵋店出發，穿梭街道、電影街、美國街與城市巷弄，一路跑、找線索、解任務、做訓練。每隊拿著專屬任務地圖，完成當站任務才能前往下一站，比的不是誰跑最快，而是哪一隊最先完成所有街頭任務、回到終點。這次由 ABC-MART 夥伴與對外報名的民眾一起參加，大家穿上活動專屬服飾，從台階熊爬、壺鈴負重走到錐桶折返一路玩到底，最後回到店內體驗鞋款。會跑，只是基本。",
+    en: "MORE THAN A RUNNER. ABC-MART and OffTrack Crew's first collaboration turned the whole of Ximending into an urban training ground. Starting from the Ximen Emei store, teams ran through streets, Cinema Street, American Street and the back alleys — running, finding clues, solving missions and training along the way. Each team carried its own mission map and could only move on after clearing the current stop. It wasn't about who ran fastest, but which team finished every street mission first and made it back to the finish. ABC-MART staff and members of the public took part together in event-exclusive apparel — from stair bear-crawls and kettlebell carries to cone shuttles — and wrapped up back in store trying shoes. Running is just the baseline."
+  },
+
   "feedback.eyebrow": { zh: "意見回饋", en: "Feedback" },
   "feedback.lead": {
     zh: "如果有特別或是有趣的路線，或是對下一檔企劃有任何想法，都歡迎跟我們說！",
@@ -146,5 +165,5 @@ const I18N_DICT = {
   "feedback.cta": { zh: "寄信給我們", en: "Email Us" },
 
   "footer.left":  { zh: "ABC-MART Taiwan　|　內部通訊分享", en: "ABC-MART Taiwan　|　Internal communication" },
-  "footer.right": { zh: "VOL.01 — VOL.03　內容回顧與成果分享", en: "VOL.01 — VOL.03　Recap & Results" }
+  "footer.right": { zh: "VOL.01 — VOL.04　內容回顧與成果分享", en: "VOL.01 — VOL.04　Recap & Results" }
 };

@@ -50,7 +50,7 @@ document.querySelectorAll('.mascot-click').forEach(el => {
 // TAB NAVIGATION (main + sub) with deep-link hash support
 // ============================================================
 const TAB_IDS = ['about', 'activities', 'other'];
-const SUBTAB_IDS = ['overview', 'vol1', 'vol2', 'vol3'];
+const SUBTAB_IDS = ['overview', 'vol1', 'vol2', 'vol3', 'vol4'];
 
 function activateTab(tabId, { updateHash = true, subtab = null } = {}) {
   if (!TAB_IDS.includes(tabId)) tabId = 'about';
@@ -176,31 +176,6 @@ function applyLanguage(lang) {
 document.getElementById('langToggle').addEventListener('click', () => {
   applyLanguage(currentLang === 'zh' ? 'en' : 'zh');
 });
-
-// ============================================================
-// Countdown timer (HYBRID TRAINING — 2026-09-30 07:30 Taipei)
-// ============================================================
-const EVENT_DATE = new Date('2026-09-30T07:30:00+08:00');
-function updateCountdown() {
-  const card = document.getElementById('eventCard');
-  const now = new Date();
-  const diff = EVENT_DATE - now;
-  if (diff <= 0) {
-    if (card) card.style.display = 'none';
-    return;
-  }
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  const pad = n => String(n).padStart(2, '0');
-  document.getElementById('cdDays').textContent = d;
-  document.getElementById('cdHours').textContent = pad(h);
-  document.getElementById('cdMins').textContent = pad(m);
-  document.getElementById('cdSecs').textContent = pad(s);
-}
-updateCountdown();
-setInterval(updateCountdown, 1000);
 
 // ============================================================
 // Number counters

@@ -399,7 +399,7 @@ section{ position:relative; }
 /* VOL overview cards */
 .vol-cards{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:18px;
   padding:24px 0 8px;
 }
@@ -1230,3 +1230,26 @@ footer{
   #backToTop.show{ opacity:.85; }
   #backToTop:active{ opacity:1; background:var(--brand-red); }
 }
+
+/* VOL4 theme — MORE THAN A RUNNER */
+#vol4{ --v4-bg:#10180C; --v4-lime:#D9F04C; --v4-ink:#F4F1DF; --v4-soft:rgba(244,241,223,.72);
+  background:radial-gradient(120% 80% at 80% -10%, #2C4A1A 0%, var(--v4-bg) 55%); color:var(--v4-ink); }
+#vol4 .vol-eyebrow{ color:var(--v4-lime); }
+#vol4 .vol-title{ color:var(--v4-lime); letter-spacing:.01em; }
+#vol4 .vol-meta, #vol4 .vol-story, #vol4 .gallery-hint{ color:var(--v4-soft); }
+#vol4 .stat-card{ background:rgba(217,240,76,.07); border-color:rgba(217,240,76,.22); }
+#vol4 .btn.primary{ background:var(--v4-lime); border-color:var(--v4-lime); color:#10180C; }
+#vol4 .gallery img{ height:520px; }
+@media (max-width:720px){ #vol4 .gallery img{ height:380px; } }
+.stat-row-4{ grid-template-columns:repeat(4,1fr); }
+@media (max-width:720px){ .stat-row-4{ grid-template-columns:1fr 1fr; } }
+.cp-block{ margin:34px 0 28px; }
+.cp-label{ font-size:12px; letter-spacing:.08em; font-weight:700; color:var(--v4-lime,#D9F04C); margin-bottom:14px; }
+#vol4 .cp-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+@media (max-width:720px){ #vol4 .cp-grid{ grid-template-columns:1fr 1fr; } }
+#vol4 .cp-card{ background:rgba(244,241,223,.06); border:1px solid rgba(217,240,76,.25); border-radius:14px; padding:16px 14px; transition:transform .25s ease; }
+#vol4 .cp-card:nth-child(odd){ transform:rotate(-1deg); } #vol4 .cp-card:nth-child(even){ transform:rotate(1deg); }
+#vol4 .cp-card:hover{ transform:translateY(-4px) rotate(0); }
+#vol4 .cp-tag{ display:inline-block; font-size:10px; font-weight:800; letter-spacing:.08em; color:#10180C; background:var(--v4-lime); padding:3px 9px; border-radius:100px; }
+#vol4 .cp-card h4{ margin:10px 0 0; font-size:16px; font-weight:700; }
+.cp-note{ margin-top:14px; font-size:13px; line-height:1.7; color:rgba(244,241,223,.65); }
